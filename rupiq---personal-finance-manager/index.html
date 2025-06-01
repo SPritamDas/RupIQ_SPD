@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RupIQ - Personal Finance</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: 'var(--color-primary, #2563EB)', // Blue-600
+            secondary: 'var(--color-secondary, #059669)', // Green-600
+            accent: 'var(--color-accent, #F59E0B)', // Amber-500
+            neutral: 'var(--color-neutral, #6B7280)', // Gray-500
+            base: {
+              100: 'var(--color-base-100, #111827)', // Gray-900 (Page BG)
+              200: 'var(--color-base-200, #1F2937)', // Gray-800 (Card/Modal/Sidebar BG)
+              300: 'var(--color-base-300, #374151)', // Gray-700 (Borders, Input BG)
+            },
+            content: 'var(--color-content, #F3F4F6)', // Gray-100 (Main Text)
+            'content-secondary': 'var(--color-content-secondary, #9CA3AF)', // Gray-400 (Subtle Text)
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --color-primary: #2563EB; /* Blue-600 */
+      --color-secondary: #059669; /* Green-600 */
+      --color-accent: #F59E0B; /* Amber-500 */
+      --color-neutral: #6B7280; /* Gray-500 */
+      --color-base-100: #111827; /* Gray-900 (Page BG) */
+      --color-base-200: #1F2937; /* Gray-800 (Card/Modal/Sidebar BG) */
+      --color-base-300: #374151; /* Gray-700 (Borders, Hover, Input BG) */
+      --color-content: #F3F4F6; /* Gray-100 (Main Text) */
+      --color-content-secondary: #9CA3AF; /* Gray-400 (Subtle Text) */
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--color-base-100);
+      color: var(--color-content);
+    }
+    /* Scrollbar styling for a more modern look */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--color-base-300); /* Darker track for dark theme */
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--color-primary);
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #1D4ED8; /* Darker primary blue */
+    }
+  </style>
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/heroicons/2.0.18/24/outline/rectangle-stack.svg" rel="preload" as="image">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.3.0",
+    "recharts": "https://esm.sh/recharts@^2.15.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
